@@ -1,7 +1,6 @@
 function fillLove() {
   document.getElementById("fill").style.width = "100%";
 
-  // Mobile vibration (works on Android)
   if (navigator.vibrate) {
     navigator.vibrate(200);
   }
@@ -9,5 +8,5 @@ function fillLove() {
 
 function forgive() {
   document.getElementById("message").innerHTML =
-    "Thank you for still choosing me. I love you endlessly ❤️";
+    "তবুও আমাকে বেছে নেওয়ার জন্য ধন্যবাদ। আমি তোমাকে সীমাহীন ভালোবাসি ❤️";
 }
