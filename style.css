@@ -4,35 +4,48 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Serif Bengali', 'Georgia', serif;
-  background: #fff0f3;
+  font-family: 'Noto Serif Bengali', serif;
+  background: linear-gradient(#fff0f3, #ffe5ec);
   color: #5a1a2c;
   text-align: center;
+  overflow-x: hidden;
 }
 
 section {
-  padding: 30px 16px;
+  padding: 40px 16px;
+}
+
+.fade {
+  animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Hero */
 .hero {
-  background: linear-gradient(#ffccd5, #fff0f3);
-  padding: 60px 16px;
+  padding-top: 80px;
 }
 
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
 }
 
 h2 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
+  font-size: 1.7rem;
 }
 
-p {
+p, li {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* Timeline */
@@ -42,11 +55,11 @@ p {
 }
 
 .timeline li {
-  background: #ffe5ec;
-  margin: 10px auto;
-  padding: 12px;
-  border-radius: 12px;
-  max-width: 360px;
+  background: rgba(255,255,255,0.6);
+  margin: 12px auto;
+  padding: 14px;
+  border-radius: 14px;
+  max-width: 380px;
 }
 
 /* Love Meter */
@@ -77,45 +90,44 @@ button {
   color: white;
   border-radius: 30px;
   font-size: 1rem;
-  cursor: pointer;
-  margin-top: 12px;
-}
-
-button:active {
-  transform: scale(0.97);
+  margin-top: 14px;
 }
 
 .forgive-btn {
   background: #c9184a;
 }
 
-/* Promise */
-.promise p {
-  margin: 8px 0;
+/* Music Button */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff4d6d;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-/* Message */
-#message {
-  margin-top: 16px;
-  font-size: 1.1rem;
-  color: #800f2f;
+/* Floating Hearts */
+.hearts::before {
+  content: "❤️ 💕 💖 💗 💘";
+  position: fixed;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  font-size: 24px;
+  animation: floatHearts 10s linear infinite;
+}
+
+@keyframes floatHearts {
+  from { top: 100%; }
+  to { top: -20%; }
 }
 
 /* Desktop */
 @media (min-width: 768px) {
-  section {
-    padding: 50px;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 1.9rem;
-  }
-
-  button {
-    font-size: 1.1rem;
-  }
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
 }
