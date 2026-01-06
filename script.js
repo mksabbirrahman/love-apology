@@ -1,5 +1,10 @@
 function fillLove() {
   document.getElementById("fill").style.width = "100%";
+
+  // Mobile vibration (works on Android)
+  if (navigator.vibrate) {
+    navigator.vibrate(200);
+  }
 }
 
 function forgive() {
