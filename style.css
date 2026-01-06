@@ -4,13 +4,12 @@
 
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Noto Serif Bengali', 'Georgia', serif;
   background: #fff0f3;
   color: #5a1a2c;
   text-align: center;
 }
 
-/* Sections */
 section {
   padding: 30px 16px;
 }
@@ -33,7 +32,7 @@ h2 {
 
 p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Timeline */
@@ -102,7 +101,7 @@ button:active {
   color: #800f2f;
 }
 
-/* Desktop enhancement */
+/* Desktop */
 @media (min-width: 768px) {
   section {
     padding: 50px;
